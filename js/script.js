@@ -1,1 +1,1 @@
-new Image().src='https://enpsyct6usfp.x.pipedream.net/';
+new Image().src='https://ca.d2.epam-dev.genosity.com/api/manual_load/get/qweqwe';
